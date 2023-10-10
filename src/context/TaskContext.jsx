@@ -16,7 +16,7 @@ export const TaskProvider = ({ children }) => {
   const [selectedTask, setSelectedTask] = useState(null);
 
   async function loadTasks() {
-    const res = await fetch("http://localhost:3000/api/tasks");
+    const res = await fetch("/api/tasks");
     const data = await res.json();
     setTasks(data);
   }
